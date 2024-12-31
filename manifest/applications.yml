@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pod-python-geoip
-        image: nx.utravs.com/challange/geoip:1.0.2
+        image: nx.utravs.com/challange/geoip:1.0.3
         ports:
         - containerPort: 80
 #        readinessProbe:
