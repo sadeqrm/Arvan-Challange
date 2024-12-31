@@ -19,7 +19,11 @@ The first step involves setting up the foundational infrastructure:
 - **Process**:
   1. Install and configure VMware Workstation.
   2. Deploy vSphere vCenter on VMware Workstation.
-  3. Add one ESXi host to vCenter to serve as the hypervisor.
+     * IP : 10.10.49.152
+       ![image](https://github.com/user-attachments/assets/af2e5df3-a806-427f-aec3-2f93596cbbf9)
+
+  4. Add one ESXi host to vCenter to serve as the hypervisor.
+     * IP : 10.10.49.153
 
 ---
 
@@ -29,6 +33,9 @@ Using Terraform to automate the creation of virtual machines:
 - **Tools Used**: Terraform.
 - **Process**:
  Write Terraform configurations to define and provision three virtual machines in vCenter then execute Terraform commands to apply the configurations and create the VMs.
+  SSH to 192.168.13.36
+  ![image](https://github.com/user-attachments/assets/30226871-0f94-40e7-9c8f-b35810a69c65)
+
   1. Go to specific path :
   `cd /opt/IaC-Terraform-ArvanChallange`
 
@@ -108,23 +115,3 @@ Automating the deployment of the Python application:
 - Test and validate each step before moving to the next.
 
 
-
-## Terraform ----> Vsphere
-
-I want to deploy 3 linux machines in Vsphere hosted by my PC with Terraform.
-My Terraform server is hosted on 192.168.13.36 linux machine.
-
-1. Go to specific path :
- `cd /opt/IaC-Terraform-ArvanChallange`
-
-2. Initializing a working directory containing Terraform configuration files :
-`terraform init`
-
-3.  Creating an execution plan in Terraform :
-`terraform plan`
-
-4. Applying changes to my infrastructure :
-`terraform apply`
-
-Then we do it for another two workers along that.
-We have 3 machines installed on out infrastructure.
