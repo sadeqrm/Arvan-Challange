@@ -1,4 +1,7 @@
 # Arvan-Challange
+
+I was asked from Arvan Team to resolve up a challange and I am so happy to make it ready last week
+
 # Project Overview
 
 This project involves setting up a production-ready Kubernetes environment and deploying a Python application with a series of automated and orchestrated steps. Below is an outline of the workflow and key components involved:
@@ -20,6 +23,7 @@ The first step involves setting up the foundational infrastructure:
   1. Install and configure VMware Workstation.
   2. Deploy vSphere vCenter on VMware Workstation.
      * IP : 10.10.49.152
+       
        ![image](https://github.com/user-attachments/assets/af2e5df3-a806-427f-aec3-2f93596cbbf9)
 
   4. Add one ESXi host to vCenter to serve as the hypervisor.
@@ -33,7 +37,9 @@ Using Terraform to automate the creation of virtual machines:
 - **Tools Used**: Terraform.
 - **Process**:
  Write Terraform configurations to define and provision three virtual machines in vCenter then execute Terraform commands to apply the configurations and create the VMs.
-  SSH to 192.168.13.36
+
+  * SSH to 192.168.13.36 :
+  
   ![image](https://github.com/user-attachments/assets/30226871-0f94-40e7-9c8f-b35810a69c65)
 
   1. Go to specific path :
@@ -50,7 +56,8 @@ Using Terraform to automate the creation of virtual machines:
 
 ---
 
-## 3. Setting up a Kubernetes Cluster
+## 3. Setting up a Kubernetes Cluster ![image](https://github.com/user-attachments/assets/af8ec33a-fb05-4a28-95b7-417f029dec8f)
+
 
 Setting up a three-node production-ready Kubernetes cluster:
 - **Tools Used**: Ansible(Kubespray Method)
@@ -59,6 +66,12 @@ Setting up a three-node production-ready Kubernetes cluster:
   2. Leverage Kubespray for deploying the Kubernetes cluster on the provisioned VMs.
   3. Ensure the cluster is production-ready with necessary configurations.
      All files related to my configuration is in Arvan folder.
+  * SSH to Master 10.10.49.154
+ `git clone https://github.com/kubernetes-sigs/kubespray.git`
+ `cd kubespray`
+ `cd inventory/Arvan/`
+
+    
 
 ---
 
