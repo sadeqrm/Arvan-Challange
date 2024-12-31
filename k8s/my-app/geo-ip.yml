@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-python-geoip
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-geoip
+  template:
+    metadata:
+      labels:
+        app: python-geoip
+    spec:
+      containers:
+      - name: pod-python-geoip
+        image: nx.utravs.com/challange/geoip:1.0.0
+        ports:
+        - containerPort: 80
+#        readinessProbe:
+#          httpGet:
+#            path: /
+#            port: 80
+#          initialDelaySeconds: 5
+#          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-geoip
+spec:
+  selector:
+    app: python-geoip
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30180
+  type: NodePort
