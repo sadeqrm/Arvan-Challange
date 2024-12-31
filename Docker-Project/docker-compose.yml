@@ -1,0 +1,10 @@
+services:
+  syslog:
+    image: nxp.utravs.com/challange/geoip:1.0.0
+    container_name: apipython
+    ports:
+      - 9000:80
+#    volumes:
+#         - ./app:/code/app
+
+
