@@ -1,6 +1,8 @@
 # Arvan-Challange
 
-I was asked from Arvan Team to resolve up a challange and I am so happy to make it ready last week
+I was asked from Arvan Team to bring up a challange request and I am so happy to make it ready last week.
+The scenario is divided into some parts which I have to solve them.
+1.Infra(IaC) 2.k8s Cluster(Ansible)  3.Postgres Cluster Setup 5.Deploying python app in k8s 6.Monitoring
 
 # Project Overview
 
@@ -67,13 +69,17 @@ Setting up a three-node production-ready Kubernetes cluster:
   3. Ensure the cluster is production-ready with necessary configurations.
      All files related to my configuration is in Arvan folder.
   * SSH to Master 10.10.49.154
+  
  `git clone https://github.com/kubernetes-sigs/kubespray.git`
+ 
  `cd kubespray`
+ 
  `cd inventory/Arvan/`
 
 Copy environment variable files for custom installation:
   `# Copy inventory/sample as inventory/MeCan`
    `cp -rfp inventory/sample inventory/Arvan`
+
 Tuning group_vars/all/all.yml.
 Tuning group_vars/all/containerd.yml.
 Tuning group_vars/all/etcd.yml.
@@ -103,11 +109,19 @@ Deploying a PostgreSQL database cluster on Kubernetes:
 For this purpose I read an article from DigitalOcean which i put it's link bellow here.
 
   https://www.digitalocean.com/community/tutorials/how-to-deploy-postgres-to-kubernetes-cluster
+
 - **Tools Used**: Kubernetes (kubectl, Helm, or manifests).
 - **Process**:
   1. Create Kubernetes manifests or Helm charts for PostgreSQL.
   2. Apply the configuration to deploy the PostgreSQL cluster.
   3. Verify the deployment and ensure high availability.
+
+    ![image](https://github.com/user-attachments/assets/f5418fb1-ea11-433d-b76d-66010fbfc618)
+
+    ![image](https://github.com/user-attachments/assets/b7475bb2-84f2-408c-b2fe-d9331c9aab7c)
+
+    ![image](https://github.com/user-attachments/assets/07c9a916-2472-4adc-b95d-5427d1804ea4)
+
 
 ---
 
