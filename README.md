@@ -71,13 +71,32 @@ Setting up a three-node production-ready Kubernetes cluster:
  `cd kubespray`
  `cd inventory/Arvan/`
 
-    
+Copy environment variable files for custom installation:
+  `# Copy inventory/sample as inventory/MeCan`
+   `cp -rfp inventory/sample inventory/Arvan`
+Tuning group_vars/all/all.yml.
+Tuning group_vars/all/containerd.yml.
+Tuning group_vars/all/etcd.yml.
+Tuning group_vars/k8s_cluster/addons.yml.
+Tuning group_vars/k8s_cluster/k8s-cluster.yml.
+Tuning group_vars/k8s_cluster/k8s-net-calico.yml.
+
+In the last command we execute our ansible-playbook command to make our cluster up :
+  `ansible-playbook -i inventory/MeCan/hosts.yaml  --become --become-user=root cluster.yml`
+
+Issue bellow commands to verify our cluster : 
+  `kubectl get nodes`
+     ![image](https://github.com/user-attachments/assets/a231636a-39dc-4dc2-957f-0dd3058bcd12)
+  `kubectl top nodes`
+     ![image](https://github.com/user-attachments/assets/55129386-b7b8-4482-87d5-34ce114cc5f5)
 
 ---
 
 ## 4. Deploying PostgreSQL Cluster
 
 Deploying a PostgreSQL database cluster on Kubernetes:
+For this purpose I read an article from DigitalOcean which i put it's link bellow here.
+  https://www.digitalocean.com/community/tutorials/how-to-deploy-postgres-to-kubernetes-cluster
 - **Tools Used**: Kubernetes (kubectl, Helm, or manifests).
 - **Process**:
   1. Create Kubernetes manifests or Helm charts for PostgreSQL.
