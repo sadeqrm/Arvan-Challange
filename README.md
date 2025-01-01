@@ -36,6 +36,7 @@ The first step involves setting up the foundational infrastructure:
 ## 2. Provisioning Virtual Machines
 
 Using Terraform to automate the creation of virtual machines:
+Path : IaC-Terraform-ArvanChallange
 - **Tools Used**: Terraform.
 - **Process**:
  Write Terraform configurations to define and provision three virtual machines in vCenter then execute Terraform commands to apply the configurations and create the VMs.
@@ -62,6 +63,7 @@ Using Terraform to automate the creation of virtual machines:
 
 
 Setting up a three-node production-ready Kubernetes cluster:
+Path : Arvan
 - **Tools Used**: Ansible(Kubespray Method)
 - **Process**:
   1. Use Ansible for automated setup and configuration.
@@ -110,6 +112,7 @@ For this purpose I read an article from DigitalOcean which i put it's link bello
 
   https://www.digitalocean.com/community/tutorials/how-to-deploy-postgres-to-kubernetes-cluster
 
+Path : k8s/postgres
 - **Tools Used**: Kubernetes (kubectl, Helm, or manifests).
 - **Process**:
   1. Create Kubernetes manifests or Helm charts for PostgreSQL.
@@ -128,13 +131,28 @@ For this purpose I read an article from DigitalOcean which i put it's link bello
 ## 5. Deploying the Python Project
 
 Automating the deployment of the Python application:
+Path: Docker-Project
 - **Tools Used**: Docker, Nexus Artifactory, GitOps, ArgoCD.
 - **Process**:
   1. Build a Docker image for the Python project.
   2. Push the Docker image to a Nexus Artifactory repository.
-  3. Create Kubernetes manifests for the application.
-  4. Use GitOps principles with ArgoCD to deploy the application to the Kubernetes cluster.
-  5. Monitor and verify the deployment.
+     
+     * ![image](https://github.com/user-attachments/assets/0f67c868-8c1f-4dbf-91b6-7ab420359b3b)
+
+  4. Create Kubernetes manifests for the application.
+     * Path : manifest
+  6. Use GitOps principles with ArgoCD to deploy the application to the Kubernetes cluster.
+     * First: connect gihub repo to ArgoCD.
+       
+       ![image](https://github.com/user-attachments/assets/b02a17b9-b02d-485a-b8b6-373c58bd106e)
+
+     * Second: create application in ArgoCD.
+       
+       ![image](https://github.com/user-attachments/assets/803e4431-da16-4741-af16-c79b05331e19)
+
+  8. Monitor and verify the deployment.
+  9. 
+       ![image](https://github.com/user-attachments/assets/a26b7c76-d45e-4076-82f3-89107d74385c)
 
 ---
 
