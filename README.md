@@ -88,11 +88,11 @@ Issue bellow commands to verify our cluster :
 
   `kubectl get nodes`
   
-     ![image](https://github.com/user-attachments/assets/a231636a-39dc-4dc2-957f-0dd3058bcd12)
-
+  ![image](https://github.com/user-attachments/assets/773f9757-fd20-4544-88ff-31a61750da4a)
+  
   `kubectl top nodes`
   
-     ![image](https://github.com/user-attachments/assets/55129386-b7b8-4482-87d5-34ce114cc5f5)
+  ![image](https://github.com/user-attachments/assets/374e468b-a264-4a4d-bd4d-3741a723a004)
 
 ---
 
