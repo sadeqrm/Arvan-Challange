@@ -1,6 +1,3 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
 name: Python application
 
 on:
@@ -42,3 +39,10 @@ jobs:
         cd Docker-Project
         pip install pytest
         export PYTHONPATH=app
+    - name: Build And Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: sadeghrm/arvan
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
