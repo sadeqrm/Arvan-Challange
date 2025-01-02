@@ -40,4 +40,5 @@ jobs:
       run: |
         # Navigate to the project directory
         cd Docker-Project
-        pytest
+        pip install pytest
+        export PYTHONPATH=app
