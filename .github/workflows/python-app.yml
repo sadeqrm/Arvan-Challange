@@ -42,7 +42,7 @@ jobs:
     - name: Build And Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        dockerfile: Docker-Project
+        dockerfile: Docker-Project/Dockerfile
         image: sadeghrm/arvan
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
