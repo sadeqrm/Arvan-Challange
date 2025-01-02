@@ -40,6 +40,7 @@ jobs:
         pip install pytest
         export PYTHONPATH=app
     - name: Build And Push Docker Image
+       cd Docker-Project
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: sadeghrm/arvan
