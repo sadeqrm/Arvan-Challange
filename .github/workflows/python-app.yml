@@ -52,5 +52,5 @@ jobs:
       if: always()
       run: |
           curl -X POST -H 'Content-Type: application/json' \
-          --data '{"text": "Pipeline for $GITHUB_REPOSITORY on branch $GITHUB_REF has completed with status $GITHUB_JOB"}' \
+          --data "{\"text\": \"Pipeline for ${{ github.repository }} on branch ${{ github.ref }} has completed with status: ${STATUS}\"}" \
           https://chat.uself.org/hooks/m9x9cjnh8jnd7xi16osgauo18c
