@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pod-python-geoip
-        image: sadeghrm/arvan:main-24f2ad2
+        image: nx.utravs.com/challange/geoip:1.0.6
         ports:
         - containerPort: 80
 #        readinessProbe:
