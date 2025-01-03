@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pod-python-geoip
-        image: sadeghrm/arvan:main-${GITHUB_SHA::7}
+        image: "sadeghrm/arvan:main-${{ github.sha::7 }}"
         ports:
         - containerPort: 80
 #        readinessProbe:
