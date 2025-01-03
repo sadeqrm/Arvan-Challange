@@ -49,8 +49,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Notify Mattermost
-      if: always()
+      if: always() # Ensure this runs after all steps.
+      env:
+        MATTERMOST_WEBHOOK_URL: https://chat.uself.org/hooks/m9x9cjnh8jnd7xi16osgauo18c
+        PIPELINE_STATUS: ${{ job.status }}
       run: |
-          curl -X POST -H 'Content-Type: application/json' \
-          --data "{\"text\": \"Pipeline for ${{ github.repository }} on branch ${{ github.ref }} has completed with status: ${STATUS}\"}" \
-          https://chat.uself.org/hooks/m9x9cjnh8jnd7xi16osgauo18c
+        curl -X POST -H 'Content-Type: application/json' \
+        --data "{\"text\": \"Pipeline for ${{ github.repository }} on branch ${{ github.ref }} has completed with status: ${PIPELINE_STATUS}\"}" \
+        $MATTERMOST_WEBHOOK_URL
