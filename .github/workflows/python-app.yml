@@ -51,7 +51,7 @@ jobs:
     - name: Notify Mattermost
       if: always() # Ensure this runs after all steps.
       env:
-        MATTERMOST_WEBHOOK_URL: https://chat.uself.org/hooks/m9x9cjnh8jnd7xi16osgauo18c
+        MATTERMOST_WEBHOOK_URL: https://chat.uself.org/hooks/39p8mttxffdzidzs1fbrcs8phy
         PIPELINE_STATUS: ${{ job.status }}
       run: |
         curl -X POST -H 'Content-Type: application/json' \
