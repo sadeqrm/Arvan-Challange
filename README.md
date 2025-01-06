@@ -160,6 +160,7 @@ Path: Docker-Project
        ![image](https://github.com/user-attachments/assets/a26b7c76-d45e-4076-82f3-89107d74385c)
 
 ---
+
 ## 6. Monitoring and Alerting
 This project implements a robust Monitoring and Alerting system to ensure high availability, performance, and quick incident response. Below, you will find detailed information about the tools and setup used for monitoring and alerting.
 The monitoring and alerting stack consists of the following components:
@@ -173,6 +174,8 @@ The monitoring and alerting stack consists of the following components:
 ![Monitoring02](https://github.com/user-attachments/assets/e2952cd5-a5a4-450a-a50b-a8c7fed6d237)
 
 ![image](https://github.com/user-attachments/assets/0d7873f4-1025-4920-8da0-9edad9904e34)
+
+---
 
 ## Prerequisites
 
