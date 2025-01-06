@@ -2,7 +2,11 @@
 
 I was asked from Arvan Team to bring up a challange request and I am so happy to make it ready last week.
 The scenario is divided into some parts which I have to solve them.
-1.Infra(IaC) 2.k8s Cluster(Ansible)  3.Postgres Cluster Setup 5.Deploying python app in k8s 6.Monitoring
+1.Infra(IaC)
+2.k8s Cluster(Ansible)
+3.Postgres Cluster Setup
+4.Deploying python app in k8s 
+6.Monitoring and Alerting
 
 # Project Overview
 
@@ -14,6 +18,7 @@ This project involves setting up a production-ready Kubernetes environment and d
 3. [Setting up a Kubernetes Cluster](#3-setting-up-a-kubernetes-cluster)
 4. [Deploying PostgreSQL Cluster](#4-deploying-postgresql-cluster)
 5. [Deploying the Python Project](#5-deploying-the-python-project)
+6. [Monitoring and Alerting](#6-monitoring-alerting)
 
 ---
 
@@ -155,6 +160,19 @@ Path: Docker-Project
        ![image](https://github.com/user-attachments/assets/a26b7c76-d45e-4076-82f3-89107d74385c)
 
 ---
+## 6. Monitoring and Alerting
+This project implements a robust Monitoring and Alerting system to ensure high availability, performance, and quick incident response. Below, you will find detailed information about the tools and setup used for monitoring and alerting.
+The monitoring and alerting stack consists of the following components:
+
+1. **Grafana** - Visualization and dashboarding for real-time monitoring.
+2. **Prometheus** - Metric collection and storage.
+3. **Mattermost** - Incident alerting and team communication.
+---
+![Monitoring01](https://github.com/user-attachments/assets/4b012ece-8f42-47a7-bb82-874bea7a186c)
+
+![Monitoring02](https://github.com/user-attachments/assets/e2952cd5-a5a4-450a-a50b-a8c7fed6d237)
+
+![image](https://github.com/user-attachments/assets/0d7873f4-1025-4920-8da0-9edad9904e34)
 
 ## Prerequisites
 
